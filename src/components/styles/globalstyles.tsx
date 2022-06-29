@@ -1,13 +1,17 @@
 import { createGlobalStyle } from 'styled-components'
 
+
 const GlobalStyle = createGlobalStyle`
+
+
+
   html,
   body {
-    color: ${({ theme }) => theme.colors.primary};
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   a {
