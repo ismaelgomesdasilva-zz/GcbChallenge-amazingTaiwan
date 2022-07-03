@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { theme } from '../styles/theme'
 
 export const ButtonComponent = styled.button`
-width: 7.7rem;
+width: 7rem;
 height: 2.6rem;
 background: ${theme.color.orange};
 border-radius: 3rem;

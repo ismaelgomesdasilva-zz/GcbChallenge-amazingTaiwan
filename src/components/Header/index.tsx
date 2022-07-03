@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
-import {Container} from './styles'
+import {Container, Border} from './styles'
 const Header = () => (
-  <Container>
+  <Border>
+   <Container>
     <div className="logo">
 
     <Image src="/logoImage.svg" width={150} height={56} />
@@ -14,6 +15,7 @@ const Header = () => (
       <Link href="/">About</Link>
       <Button title="Sing In" />
     </nav>
-  </Container>
+    </Container>
+  </Border>
 );
 export default Header;
