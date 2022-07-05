@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Button from "../Button"
+import Carousel from "../Destinations"
 import {Container, BackgroundTop} from './style'
 
 
@@ -19,6 +20,7 @@ const HomePage = () => (
     </div>
     <Image src='/homeImage.svg' width={800} height={630}></Image>
         </Container>
+        
         <BackgroundTop/>
     </>
 

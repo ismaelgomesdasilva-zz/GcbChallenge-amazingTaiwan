@@ -1,54 +1,48 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const ContainerRelative = styled.div<{ max?: number }>`
-  position: relative;
-  max-width: ${({ max }) => `${max}px`};
-  width: 100%;
-  padding: 0 2rem;
-`
-
-export const Container = styled.div<{ height?: number }>`
-  max-width: 100%;
-  width: 100%;
-  height: ${({ height }) => `${height}px`};
-  display: flex;
-  overflow-x: scroll;
-  gap: 2rem;
-  scroll-behavior: smooth;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  .buttons {
+export const Container = styled.div`
+background-color: 
+#293241;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 48.4375rem;
+img{
     position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translateX(-50%);
+}
+`
+export const Cards = styled.div`
+width: 250px;
+height: 133px;
+background-color: #FFF;
+border-radius: 20px;
+position: relative;
+bottom: 100px;
+left: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-left: 1rem;
+gap: 5px;
+h1{
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+color: #293241;
+margin: 0;
+}
+p{
+    font-style: normal;
+font-weight: 400;
+font-size: 18px;
+margin: 0;
+color: #293241;
+}
+svg{
     display: flex;
-    justify-content: center;
-    max-width: 100%;
-    width: 100%;
-    button {
-      background: none;
-      border: none;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-    .prev {
-      transform: translateX(10px);
-    }
-    .next {
-      transform: translateX(-10px);
-    }
-  }
-`
+    flex-direction: columm;
+}
 
-export const BallsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-export const Balls = styled.button<{ active?: boolean }>`
-  svg {
-    color: ${({ active }) => (active ? '#fff' : 'grey')};
-  }
 `
