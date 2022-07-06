@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../styles/theme'
+import { theme } from '../../utils/styles/theme'
 
 export const ButtonComponent = styled.button`
 width: 7rem;

@@ -25,7 +25,7 @@ const Carousel = ({ children, maxWidth, height }: CarouselParams) => {
     if (carouselRef.current) {
       const carousel = carouselRef.current
 
-      const balls = Math.round(carousel.children.length / 3)
+      const balls = Math.round(carousel.children.length / 4)
 
       setStateCarousel({
         ...stateCarousel,

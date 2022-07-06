@@ -31,7 +31,7 @@ height: 2.6875rem;
 }
 `
 export const BackgroundTop = styled.div`
-content: "";
+
 background-image: url('./waveTop.svg');
 background-repeat: no-repeat;
 background-size: 100%;

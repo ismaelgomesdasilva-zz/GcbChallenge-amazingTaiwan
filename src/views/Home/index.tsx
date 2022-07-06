@@ -1,6 +1,5 @@
 import Image from "next/image"
-import Button from "../Button"
-import Carousel from "../Destinations"
+import Button from "../../components/Button"
 import {Container, BackgroundTop} from './style'
 
 

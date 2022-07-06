@@ -8,19 +8,19 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 100%;
-height: 48.4375rem;
+height: 40rem;
 img{
     position: absolute;
 }
 `
 export const Cards = styled.div`
 width: 250px;
-height: 133px;
+height: 110px;
 background-color: #FFF;
 border-radius: 20px;
 position: relative;
 bottom: 100px;
-left: 30px;
+left: 15px;
 display: flex;
 flex-direction: column;
 justify-content: center;
