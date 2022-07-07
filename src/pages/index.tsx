@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import HomePage from "../views/Home";
 import Feedback from "../views/Feedback";
 import Subscribe from "../views/Subscribe";
+import Footer from "../views/Footer";
 
 
 
@@ -18,6 +19,7 @@ export default function Home() {
     <About/>
     <Feedback/>
     <Subscribe/>
+    <Footer/>
     </>
   )
 }

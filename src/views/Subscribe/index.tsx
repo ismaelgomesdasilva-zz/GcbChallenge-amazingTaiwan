@@ -1,8 +1,9 @@
-import Image from 'next/image'
+
 import {Container, Modal} from './styles'
 
 
 const Subscribe = () => (
+
 
 
 <Container>
@@ -14,12 +15,13 @@ const Subscribe = () => (
 every week.</p>
 <form action='/' method='post'>
   <input type='text' name='pesquisa' placeholder='Your email here'/>
-  <button type='submit'>Pesquisar</button>
+  <button type='submit'>Join Now</button>
 </form>
 </div>
 
     </Modal>
 </Container>
+
 
 
 )

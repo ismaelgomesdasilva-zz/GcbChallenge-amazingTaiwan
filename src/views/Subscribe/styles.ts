@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-margin: 150px auto;
+margin-top: 9.375rem;
+margin-bottom: 20rem;
 form {
     width: 32.4263rem;
 height: 3.2237rem;
@@ -20,8 +21,8 @@ padding-left: 1rem;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 300;
-font-size: 18px;
-line-height: 27px;
+font-size: 1.125rem;
+line-height: 1.6875rem;
 /* identical to box height */
 
 
@@ -40,7 +41,7 @@ outline: none;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 600;
-font-size: 18px;
+font-size: 1.125rem;
 text-align: center;
 color: #FFFFFF;
 }
@@ -48,8 +49,8 @@ color: #FFFFFF;
 export const Modal = styled.div`
 width: 77.5rem;
 height: 24.8rem;
-padding-left: 120px;
-padding-top: 45px;
+padding-left: 7.5rem;
+padding-top: 3.75rem;
 background-color: 
 #293241;
 border-radius: 1.25rem;
@@ -59,16 +60,16 @@ background-image: url('/contactImage.svg');
 background-repeat: no-repeat;
 background-position: 37.5rem -5.625rem;
 h1{font-weight: 700;
-font-size: 36px;
+font-size: 2.25rem;
 margin: 0;
 color: #FFFFFF;}
 p{
   font-weight: 400;
-font-size: 18px;
+font-size: 1.125rem;
 margin: 0;
-margin-top: 9px;
-margin-bottom: 50px;
+margin-top: 0.5625rem;
+margin-bottom: 3.125rem;
 color: #FFFFFF;
-width: 515px;
+width: 32.1875rem;
 }
 `
