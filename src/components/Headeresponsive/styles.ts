@@ -64,7 +64,7 @@ display: none;
         list-style: none
     }
     .listItems li{
-     margin: 2px 8px;
+     margin: 5px 8px;
      cursor: pointer;
     }
     .icon.iconActive .hamburger{
@@ -88,11 +88,12 @@ display: none;
         position: absolute;
         right: 0;
         z-index: 2;
-  
+        padding: 5px 20px;
         height: 100vh;
-        background: #000;
+        background: #E96A4D;
         box-shadow: 10px 0px 69px 0px rgba(0,0,0,0.59);
         animation: go 0.3s alternate;
+        opacity: 0.95;
     }
     .menu.menuClose{
         display: none;

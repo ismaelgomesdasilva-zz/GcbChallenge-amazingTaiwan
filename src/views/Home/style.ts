@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import mediaQuery from "../../utils/mediaQuery";
 
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
+margin: 5px auto;
   h1 {
     width: 29.9375rem;
     height: 14.0625rem;
@@ -27,7 +28,14 @@ export const Container = styled.div`
     width: 10.25rem;
     height: 2.6875rem;
   }
+  @media (max-width: ${mediaQuery.xl}) {
+  
+  p, h1, button{
+    margin-left: 30px;
+  }
+  }
   @media (max-width: ${mediaQuery.lg}) {
+   
     h1 {
       width: 28rem;
       height: 8rem;
@@ -44,13 +52,14 @@ export const Container = styled.div`
       color: #293241;
     }
     >div{
-        height: 50%;
+        height: 80%;
     }
     .PrimaryImage{
         width: 400px
     }
   }
-  @media(max-width:${ mediaQuery.mdl}){
+  @media(max-width:${mediaQuery.mdl}){
+    
     .PrimaryImage{
         width: 300px
     }
@@ -68,12 +77,18 @@ export const Container = styled.div`
       font-size: 0.75rem;
       line-height: 0.75rem;
       color: #293241;
+    
     }
+    p, h1, button{
+    margin-left: 0px;
   }
+  }
+  
   @media(max-width: ${mediaQuery.sml})
   {
     align-items: center;
     text-align: center;
+    margin: 0;
     .PrimaryImage{
         display: none;
     }
@@ -87,7 +102,6 @@ export const Container = styled.div`
     }
     p {
       width: 24rem;
-      
       font-weight: 400;
       font-size:1rem;
       line-height: 1.5rem;
@@ -112,12 +126,20 @@ export const Container = styled.div`
     }
     p {
       width: 18rem;
-      
       font-weight: 400;
       font-size:0.8rem;
       line-height: 1rem;
       color: #293241;
        margin-bottom: 1rem;
+    }
+  }
+  @media (max-width: ${mediaQuery.xs}){
+    h1{
+      width: 18rem;
+    }
+    p{
+      width: 13rem;
+      margin-bottom: 2rem;
     }
   }
   }
@@ -126,7 +148,7 @@ export const BackgroundTop = styled.div`
   background-image: url("./waveTop.svg");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: bottom;
+  background-position: 0% 105%;
   height: 20vh;
   width: 100%;
 `;
