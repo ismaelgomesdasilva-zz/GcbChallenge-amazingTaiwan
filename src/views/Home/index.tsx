@@ -17,7 +17,10 @@ const HomePage = () => (
     <b>Taiwan Experience</b></p>
     <Button title='Let’s Explore'/>
     </div>
-    <Image src='/homeImage.svg' width={800} height={630}></Image>
+    <div className='PrimaryImage'>
+
+    <Image src='/homeImage.svg' width={750} height={630}/>
+    </div>
         </Container>
         
         <BackgroundTop/>

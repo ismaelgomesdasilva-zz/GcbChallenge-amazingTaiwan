@@ -7,6 +7,7 @@ export const Container = styled.header`
   gap: 600px;
   max-width: 1330px;
   height: 5.8rem;
+  
   nav {
     display: flex;
     align-items: center;

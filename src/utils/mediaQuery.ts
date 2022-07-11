@@ -1,6 +1,7 @@
  type mediaQueryTypes = {
     xs: '320px',
     sm: '420px',
+    sml:'650px',
     md: '768px',
     mdl: '850px',
     lg: '1024px',
@@ -15,6 +16,7 @@
 const mediaQuery: mediaQueryTypes = {
     xs: '320px',
     sm: '420px',
+    sml:'650px',
     md: '768px',
     mdl: '850px',
     lg: '1024px',

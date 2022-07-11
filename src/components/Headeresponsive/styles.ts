@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import mediaQuery from "../../utils/mediaQuery";
 export const Container = styled.header`
 display: none;
+
 @media (max-width: ${mediaQuery.md}){
     display: block;
 }
@@ -9,7 +10,6 @@ display: none;
     position: absolute;
     z-index: 999;
     right: 9%;
-    width: fit-content;
     height: 44px;
     cursor: pointer;
 
@@ -19,7 +19,7 @@ display: none;
     left: 10%;
     width: 37px;
     height: 6px;
-    background-color: #ff3300;
+    background-color: #ee6c4d;
     position: absolute;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: 0.5s;
@@ -32,7 +32,7 @@ display: none;
         width: 37px;
         height: 6px;
         position: absolute;
-        background: #ff3300;
+        background: #ee6c4d;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         transition: 0.5s;
     }
@@ -44,7 +44,7 @@ display: none;
         position: absolute;
         width: 37px;
         height: 6px;
-        background: #ff3300;
+        background: #ee6c4d;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         transition: 0.5s;
     
@@ -110,7 +110,12 @@ display: none;
 }
 @media (max-width: ${mediaQuery.md}){
     display: block;
+    .icon{
+        right: 15%;
+    }
 }
+
+
 `
 
 
