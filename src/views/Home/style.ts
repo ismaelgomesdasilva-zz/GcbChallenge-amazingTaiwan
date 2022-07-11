@@ -4,16 +4,15 @@ import mediaQuery from "../../utils/mediaQuery";
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
+ 
   justify-content: center;
-margin: 5px auto;
+
   h1 {
     width: 29.9375rem;
     height: 14.0625rem;
     font-weight: 700;
     font-size: 3.125rem;
     line-height: 4.6875rem;
-
     color: #ee6c4d;
   }
   p {

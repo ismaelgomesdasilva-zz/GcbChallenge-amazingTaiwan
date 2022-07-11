@@ -3,7 +3,7 @@ import mediaQuery from "../../utils/mediaQuery";
 export const Container = styled.header`
   display: flex;
   align-items: center;
-  margin: auto;
+  
   gap: 600px;
   max-width: 1330px;
   height: 5.8rem;
