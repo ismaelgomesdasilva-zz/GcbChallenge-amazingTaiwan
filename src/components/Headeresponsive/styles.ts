@@ -120,7 +120,7 @@ export const Container = styled.header`
     }
     100% {
       width: 12.5rem;
-      opacity: 1;
+      opacity: 0.95;
     }
   }
   @keyframes opacity {
@@ -130,7 +130,7 @@ export const Container = styled.header`
     }
     100% {
       
-      opacity: 1;
+      opacity: 0.95;
     }
   }
   @media (max-width: ${mediaQuery.md}) {

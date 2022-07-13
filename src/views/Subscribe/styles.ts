@@ -21,7 +21,6 @@ export const Container = styled.div`
     font-size: 1.125rem;
     line-height: 1.6875rem;
     color: rgba(41, 50, 65, 0.5);
-    
   }
 
   form > button {
@@ -39,25 +38,24 @@ export const Container = styled.div`
     color: #ffffff;
   }
   @media (max-width: ${mediaQuery.sml}) {
-  
     form {
       width: 90%;
     }
     form > input {
-      width:100%;
+      width: 100%;
       margin: 0 auto;
       text-align: center;
       padding: 0;
     }
-      
-    form > button{
-      background-color: #EE6C4D;
-      margin-top: 20px;;
+
+    form > button {
+      background-color: #ee6c4d;
+      margin-top: 20px;
     }
   }
 `;
 export const Modal = styled.div`
-width: 90%;
+  width: 90%;
   height: 24.8rem;
   padding-left: 7.5rem;
   padding-top: 3.75rem;
@@ -82,11 +80,16 @@ width: 90%;
     color: #ffffff;
     width: 32.1875rem;
   }
-  @media (max-width: ${mediaQuery.lg}) {
+
+  @media (max-width: ${mediaQuery.xl}) {
     background-repeat: no-repeat;
-    background-position: 27rem -2.625rem;
+  
     padding-left: 3rem;
     background-size: 550px;
+    background-position: 36rem 0;
+  }
+  @media (max-width: ${mediaQuery.lg}) {
+    background-position: 29rem 0;
   }
   @media (max-width: ${mediaQuery.mdl}) {
     background-image: none;
@@ -96,23 +99,24 @@ width: 90%;
     padding: 0;
     text-align: center;
   }
- @media (max-width: ${mediaQuery.md}) {
-  div{
-    width: 80%;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+  @media (max-width: ${mediaQuery.md}) {
+    div {
     
-  
-   p {
-      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 72%;
+      p {
+        width: 80%;
+      }
+    }
   }
+  @media (max-width: ${mediaQuery.sml}) {
+    height: 26rem;
+    padding: 0;
   }
-  
- }
- @media (max-width: ${mediaQuery.sml}) {
-  height: 30rem;
-  padding: 0;
- }
+  @media (max-width: ${mediaQuery.sm}) {
+    height: 30rem;
+    padding: 0;
+  }
 `;
