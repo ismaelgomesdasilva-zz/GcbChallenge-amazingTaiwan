@@ -1,6 +1,8 @@
 import { Container } from "./styles";
 import { useState } from "react";
-
+import {AiOutlineHome} from 'react-icons/ai'
+import {BiPlanet, BiPencil} from 'react-icons/bi'
+import {BsPeople} from 'react-icons/bs'
 function Headeresponsive() {
     const [active, setMode] = useState(false)
     const ToggleMode = () => {
@@ -17,10 +19,10 @@ function Headeresponsive() {
 
                     <ul className="listItems">
 
-                        <li>Home</li>
-                        <li>Explore</li>
-                        <li>About</li>
-                        <li>Sign in</li>
+                        <li><AiOutlineHome/>Home</li>
+                        <li><BiPlanet/>Explore</li>
+                        <li><BiPencil/>About</li>
+                        <li><BsPeople/>Sign in</li>
                     </ul>
                 </div>
             </div>

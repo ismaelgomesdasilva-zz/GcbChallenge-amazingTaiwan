@@ -35,6 +35,7 @@ export const Description = styled.div`
     font-weight: 700;
   }
   p {
+    margin: 0 0.625rem;
     margin-bottom: 1.6875rem;
   }
   @media (max-width: ${mediaQuery.xl}) {
@@ -44,16 +45,38 @@ export const Description = styled.div`
     line-height: 2rem;
     margin: 2rem 2.5rem;
   }
-  @media (max-width: ${mediaQuery.lg}){
+  @media (max-width: ${mediaQuery.lg}) {
     width: 23rem;
     font-size: 1.1rem;
     line-height: 1.5rem;
+  }
+  @media (max-width: ${mediaQuery.mdl}) {
+    width: 40rem;
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+
+    text-align: center;
+  }
+  @media (max-width: ${mediaQuery.xs}) {
+    width: 90%;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.2rem;
+
+    text-align: center;
   }
 `;
 
 export const ImageLogo = styled.div`
   @media (max-width: ${mediaQuery.xl}) {
-    width: 400px;
+    width: 25rem;
+  }
+  @media (max-width: ${mediaQuery.lg}) {
+    width: 18.75rem;
+  }
+  @media (max-width: ${mediaQuery.mdl}) {
+    display: none;
   }
 `;
 

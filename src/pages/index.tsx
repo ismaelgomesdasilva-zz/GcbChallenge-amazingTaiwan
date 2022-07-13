@@ -20,8 +20,8 @@ export default function Home() {
     <Destination/>
     <About/>
     <Feedback/>
-    <Subscribe/>
-    <Footer/>
+     <Subscribe/>
+    {/*<Footer/> */}
     </>
   )
 }

@@ -4,9 +4,12 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   
-  gap: 600px;
-  max-width: 1330px;
+  
+  max-width: 75rem;
   height: 5.8rem;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 31.25rem;
   
   nav {
     display: flex;

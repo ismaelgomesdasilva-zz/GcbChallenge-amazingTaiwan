@@ -2,5 +2,11 @@
     "cSpell.words": [
         "swiper",
         "Swiper"
+    ],
+    "favorites.resources": [
+        {
+            "filePath": "src",
+            "group": "Default"
+        }
     ]
 }

@@ -18,6 +18,7 @@ every week.</p>
   <button type='submit'>Join Now</button>
 </form>
 </div>
+            
 
     </Modal>
 </Container>

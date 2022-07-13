@@ -147,7 +147,15 @@ export const BackgroundTop = styled.div`
   background-image: url("./waveTop.svg");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 0% 105%;
+  background-position: 0% 108%;
   height: 20vh;
   width: 100%;
+  @media (max-width: ${mediaQuery.lg}) {
+
+    height: 20vh;
+  }
+@media (max-width: ${mediaQuery.sm}) {
+
+height:  10vh;
+}
 `;
