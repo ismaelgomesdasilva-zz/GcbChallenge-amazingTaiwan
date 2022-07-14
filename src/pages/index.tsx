@@ -6,20 +6,20 @@ import Feedback from "../views/Feedback";
 import Subscribe from "../views/Subscribe";
 import Footer from "../views/Footer";
 import Headeresponsive from "../components/Headeresponsive";
-import { Carouseel } from "../components/Carousel";
 
 export default function Home() {
   return (
     <>
-    <Carouseel/>
-      {/* <Headeresponsive />
+    
+    
+      <Headeresponsive />
       <Header />
       <HomePage />
       <Destination />
       <About />
       <Feedback />
       <Subscribe />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

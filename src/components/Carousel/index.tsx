@@ -1,64 +1,90 @@
+import { CaretLeft, CaretRight, Circle } from 'phosphor-react'
+import { MouseEvent, useCallback, useEffect, useRef, useState } from 'react'
+import * as S from './styles'
 
-import Carousel from 'nuka-carousel';
-import styled from 'styled-components';
-import Image from 'next/image';
-export const Container = styled.div`
-  width: 50%;
-  height: 408px;
-  background-color: aliceblue;
-  ` 
-  export const ButtonPrev = styled.button`
-    background-color: black;
-    position: relative;
-    bottom: -200px;
-  `
-  export const Balls = styled.div`
-  position: relative;
-  `
-export function Carouseel(){
-  return(
-    <Container>
+interface StateCaroselParams {
+  widthCarousel?: number
+  widthChildrens?: number
+  qntChildrens?: number
+  qntBalls?: number[]
+  maxWidthCarousel?: number
+}
 
-    <Carousel
-  renderTopCenterControls={({ currentSlide }) => (
-    <Balls>Slide: {currentSlide}</Balls>
-    )}
-    renderCenterLeftControls={({ previousSlide }) => (
-      <button onClick={previousSlide}>Previous</button>
-      )}
-      renderCenterRightControls={({ nextSlide }) => (
-        <ButtonPrev onClick={nextSlide}>Next</ButtonPrev>
-        )}
->
-<div>
-<Image layout="fixed" src="/towerCity.png" width={277} height={408} />
+interface CarouselParams {
+  children: React.ReactNode
+  maxWidth?: number
+  height?: number
+}
 
-      
-  </div>
-  <div>
-  <Image layout="fixed" src="/towerCity.png" width={277} height={408} />
+const Carousel = ({ children, maxWidth, height }: CarouselParams) => {
+  const carouselRef = useRef<HTMLDivElement>(null)
+  const [stateCarousel, setStateCarousel] = useState<StateCaroselParams>()
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-  </div>
-  <div>
-<Image layout="fixed" src="/towerCity.png" width={277} height={408} />
+  const handleCarousel = useCallback(() => {
+    if (carouselRef.current) {
+      const carousel = carouselRef.current
 
-      
-  </div>
-  <div>
-  <Image layout="fixed" src="/towerCity.png" width={277} height={408} />
+      const balls = Math.round(carousel.children.length / 4)
 
-  </div>
-  <div>
-<Image layout="fixed" src="/towerCity.png" width={277} height={408} />
+      setStateCarousel({
+        ...stateCarousel,
+        widthCarousel: carousel.clientWidth,
+        qntBalls: new Array(balls).fill(0),
+        widthChildrens: carousel.children.item(0)?.clientWidth,
+        maxWidthCarousel:
+          (carousel.children.length - 1) * carousel.children.item(0)?.clientWidth!
+      })
+    }
+  }, [setStateCarousel])
 
-      
-  </div>
-  <div>
-  <Image layout="fixed" src="/towerCity.png" width={277} height={408} />
+  const handleCarouselAction = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
 
-  </div>
+    switch (e.currentTarget.id) {
+      case 'next':
+        if (currentIndex < stateCarousel?.qntBalls?.length! - 1) {
+          setCurrentIndex(currentIndex + 1)
+        }
+        return (carouselRef.current!.scrollLeft += carouselRef.current!.offsetWidth)
 
-</Carousel>
-  </Container>
+      case 'prev':
+        if (currentIndex > 0) {
+          setCurrentIndex(currentIndex - 1)
+        }
+        return (carouselRef.current!.scrollLeft -= carouselRef.current!.offsetWidth)
+
+      default:
+        return null
+    }
+  }
+
+  useEffect(() => {
+    handleCarousel()
+  }, [handleCarousel])
+
+  return (
+    <S.ContainerRelative max={maxWidth || stateCarousel?.maxWidthCarousel}>
+      <S.Container ref={carouselRef} height={height}>
+        {children}
+        <div className='buttons'>
+          <button onClick={handleCarouselAction} id='prev' className='prev'>
+            <CaretLeft size={32} color='white' />
+          </button>
+          <S.BallsContainer>
+            {stateCarousel?.qntBalls!.map((item, index) => (
+              <S.Balls key={item} active={currentIndex === index}>
+                <Circle size={20} weight='fill' />
+              </S.Balls>
+            ))}
+          </S.BallsContainer>
+          <button onClick={handleCarouselAction} id='next' className='next'>
+            <CaretRight size={32} color='white' />
+          </button>
+        </div>
+      </S.Container>
+    </S.ContainerRelative>
   )
 }
+
+export default Carousel
