@@ -18,14 +18,7 @@ const items = [
   <div className="item" data-value="4"><CardsDestination/></div>,
   <div className="item" data-value="5"><CardsDestination/></div>,
   <div className="item" data-value="6"><CardsDestination/></div>,
-  <div className="item" data-value="7"><CardsDestination/></div>,
-  <div className="item" data-value="8"><CardsDestination/></div>,
-  <div className="item" data-value="10"><CardsDestination/></div>,
-  <div className="item" data-value="11"><CardsDestination/></div>,
-  <div className="item" data-value="12"><CardsDestination/></div>,
-  <div className="item" data-value="13"><CardsDestination/></div>,
-  <div className="item" data-value="14"><CardsDestination/></div>,
-  <div className="item" data-value="15"><CardsDestination/></div>,
+
 
 ];
 
