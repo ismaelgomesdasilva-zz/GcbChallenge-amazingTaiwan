@@ -1,9 +1,6 @@
-
-import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import CardsDestination from "../CardsDestination";
-
+import {CardsDestination} from "../CardsDestination";
 
 
 const responsive = {
@@ -11,7 +8,6 @@ const responsive = {
   568: { items: 2 },
   1024: { items: 4 },
 };
-
 
 const items = [
   <div className="item" data-value="1"><CardsDestination src="/towerCity.png" width={277} height={408} title='Taipei' traveling={56} initialValue={5}/></div>,
@@ -21,7 +17,7 @@ const items = [
   <div className="item" data-value="5"><CardsDestination src="/sunMon.jpg" width={277} height={408} title='Taoko' traveling={120} initialValue={3} /></div>,
 
 ];
-const Carousel = () => (
+export const Carousel = () => (
 
   <AliceCarousel
     mouseTracking
@@ -32,4 +28,4 @@ const Carousel = () => (
     infinite={false}
     ssrSilentMode={true} />
 );
-export default Carousel;
+
