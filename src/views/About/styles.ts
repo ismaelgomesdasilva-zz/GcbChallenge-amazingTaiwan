@@ -9,7 +9,7 @@ export const BackgroundBottom = styled.section`
   height: 20vh;
   width: 100%;
   @media (max-width: 896px) {
-    background-position: 0% 0%;
+    background-position: 0% -1%;
   }
 `;
 export const AlingItens = styled.div`

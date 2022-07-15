@@ -1,90 +1,39 @@
-import { CaretLeft, CaretRight, Circle } from 'phosphor-react'
-import { MouseEvent, useCallback, useEffect, useRef, useState } from 'react'
-import * as S from './styles'
 
-interface StateCaroselParams {
-  widthCarousel?: number
-  widthChildrens?: number
-  qntChildrens?: number
-  qntBalls?: number[]
-  maxWidthCarousel?: number
-}
+import React from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import CardsDestination from "../CardsDestination";
 
-interface CarouselParams {
-  children: React.ReactNode
-  maxWidth?: number
-  height?: number
-}
 
-const Carousel = ({ children, maxWidth, height }: CarouselParams) => {
-  const carouselRef = useRef<HTMLDivElement>(null)
-  const [stateCarousel, setStateCarousel] = useState<StateCaroselParams>()
-  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const handleCarousel = useCallback(() => {
-    if (carouselRef.current) {
-      const carousel = carouselRef.current
+const responsive = {
+  0: { items: 1 },
+  568: { items: 2 },
+  1024: { items: 4 },
+};
 
-      const balls = Math.round(carousel.children.length / 4)
+const items = [
+  <div className="item" data-value="1"><CardsDestination/></div>,
+  <div className="item" data-value="2"><CardsDestination/></div>,
+  <div className="item" data-value="3"><CardsDestination/></div>,
+  <div className="item" data-value="4"><CardsDestination/></div>,
+  <div className="item" data-value="5"><CardsDestination/></div>,
+  <div className="item" data-value="5"><CardsDestination/></div>,
 
-      setStateCarousel({
-        ...stateCarousel,
-        widthCarousel: carousel.clientWidth,
-        qntBalls: new Array(balls).fill(0),
-        widthChildrens: carousel.children.item(0)?.clientWidth,
-        maxWidthCarousel:
-          (carousel.children.length - 1) * carousel.children.item(0)?.clientWidth!
-      })
-    }
-  }, [setStateCarousel])
 
-  const handleCarouselAction = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
 
-    switch (e.currentTarget.id) {
-      case 'next':
-        if (currentIndex < stateCarousel?.qntBalls?.length! - 1) {
-          setCurrentIndex(currentIndex + 1)
-        }
-        return (carouselRef.current!.scrollLeft += carouselRef.current!.offsetWidth)
+];
 
-      case 'prev':
-        if (currentIndex > 0) {
-          setCurrentIndex(currentIndex - 1)
-        }
-        return (carouselRef.current!.scrollLeft -= carouselRef.current!.offsetWidth)
+const Carousel = () => (
 
-      default:
-        return null
-    }
-  }
+  <AliceCarousel
+    mouseTracking
+    items={items}
+    responsive={responsive}
+    paddingRight={0}
+    paddingLeft={0}
+    infinite={true}
+    ssrSilentMode={true}  />
 
-  useEffect(() => {
-    handleCarousel()
-  }, [handleCarousel])
-
-  return (
-    <S.ContainerRelative max={maxWidth || stateCarousel?.maxWidthCarousel}>
-      <S.Container ref={carouselRef} height={height}>
-        {children}
-        <div className='buttons'>
-          <button onClick={handleCarouselAction} id='prev' className='prev'>
-            <CaretLeft size={32} color='white' />
-          </button>
-          <S.BallsContainer>
-            {stateCarousel?.qntBalls!.map((item, index) => (
-              <S.Balls key={item} active={currentIndex === index}>
-                <Circle size={20} weight='fill' />
-              </S.Balls>
-            ))}
-          </S.BallsContainer>
-          <button onClick={handleCarouselAction} id='next' className='next'>
-            <CaretRight size={32} color='white' />
-          </button>
-        </div>
-      </S.Container>
-    </S.ContainerRelative>
-  )
-}
-
-export default Carousel
+);
+export default Carousel;

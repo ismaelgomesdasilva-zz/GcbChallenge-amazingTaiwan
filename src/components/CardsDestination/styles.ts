@@ -6,7 +6,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-height: 775px;
+
 img{
     border-radius: 1.5rem;
 }
@@ -25,6 +25,7 @@ flex-direction: column;
 justify-content: center;
 padding-left: 1rem;
 gap: 0.3125rem;
+
 h1{
 
 font-weight: 700;
