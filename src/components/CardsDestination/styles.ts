@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const AlignDiv = styled.div`
-
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -9,6 +8,8 @@ justify-content: center;
 
 img{
     border-radius: 1.5rem;
+    width: auto;
+    height: auto;
 }
 `
 export const Cards = styled.div`
@@ -40,9 +41,4 @@ font-size: 1.125rem;
 margin: 0;
 color: #293241;
 }
-svg{
-    display: flex;
-    flex-direction: columm;
-}
-
 `

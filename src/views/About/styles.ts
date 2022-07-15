@@ -11,6 +11,9 @@ export const BackgroundBottom = styled.section`
   @media (max-width: 896px) {
     background-position: 0% -1%;
   }
+  @media (max-width: 1160px) {
+    background-position: 0% 0%;
+  }
 `;
 export const AlingItens = styled.div`
   display: flex;

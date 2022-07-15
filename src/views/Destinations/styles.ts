@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mediaQuery from "../../utils/mediaQuery";
 
 export const Container = styled.div`
 background-color: 
@@ -66,10 +67,17 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 10rem;
+@media (max-width: ${mediaQuery.fullHD}){
+height: 4rem;
+}
+@media (max-width: ${mediaQuery.lg}){
+height: 4rem;
+}
 button{
     width: 10.25rem;
 height: 2.6875rem;
 
 box-shadow: 0px 6px 30px 3px rgba(252,106,77,0.5);
+    
 }
 `

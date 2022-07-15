@@ -1,51 +1,30 @@
 import Image from 'next/image'
-import {AlignDiv, Cards} from './styles'
+import { Rating } from 'react-simple-star-rating'
+import { AlignDiv, Cards } from './styles'
+
+type CardsDestinationProps = {
+  src: string,
+  width: number,
+  height: number,
+  title: string,
+  traveling: number,
+  initialValue: number,
+}
 
 
-
-
-const CardsDestination = () => (
+const CardsDestination = ({ src, width, height, title, traveling, initialValue }: CardsDestinationProps) => (
   <AlignDiv>
-    <Image layout="fixed" src="/towerCity.png" width={277} height={408} />
-      <Cards>
-        <h1>Taipei</h1>
-        <p>
-          56 Destinations
-          <br />
-          <Image
-            layout="fixed"
-            src="/Vector.svg"
-            width={20}
-            height={20}
-          ></Image>
-          <Image
-            layout="fixed"
-            src="/Vector.svg"
-            width={20}
-            height={20}
-          ></Image>
-          <Image
-            layout="fixed"
-            src="/Vector.svg"
-            width={20}
-            height={20}
-          ></Image>
-          <Image
-            layout="fixed"
-            src="/Vector.svg"
-            width={20}
-            height={20}
-          ></Image>
-          <Image
-            layout="fixed"
-            src="/Vector.svg"
-            width={20}
-            height={20}
-          ></Image>
-        </p>
-      </Cards>
+    <Image layout="fixed" src={src} width={width} height={height} />
+    <Cards>
+      <h1>{title}</h1>
+      <p>
+        {traveling} Destinations
+        <br />
+        <Rating ratingValue={0} initialValue={initialValue} readonly={true} emptyColor="#FFFF" size={18}/>
+      </p>
+    </Cards>
   </AlignDiv>
 
-  
+
 )
 export default CardsDestination 
