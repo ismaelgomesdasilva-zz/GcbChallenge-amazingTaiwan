@@ -11,15 +11,15 @@ export default function Home() {
   return (
     <>
     
-    
-      <Headeresponsive />
+
+       <Headeresponsive />
       <Header />
       <HomePage />
       <Destination />
       <About />
       <Feedback />
       <Subscribe />
-      <Footer />
+      <Footer /> 
     </>
   );
 }
