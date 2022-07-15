@@ -26,6 +26,7 @@ export const Container = styled.div`
   button {
     width: 10.25rem;
     height: 2.6875rem;
+    box-shadow: 0px 6px 30px 3px rgba(252,106,77,0.5);
   }
   @media (max-width: ${mediaQuery.xl}) {
   
