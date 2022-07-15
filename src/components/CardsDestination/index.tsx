@@ -12,7 +12,7 @@ type CardsDestinationProps = {
 }
 
 
-const CardsDestination = ({ src, width, height, title, traveling, initialValue }: CardsDestinationProps) => (
+export const CardsDestination = ({ src, width, height, title, traveling, initialValue }: CardsDestinationProps) => (
   <AlignDiv>
     <Image layout="fixed" src={src} width={width} height={height} />
     <Cards>
@@ -27,4 +27,3 @@ const CardsDestination = ({ src, width, height, title, traveling, initialValue }
 
 
 )
-export default CardsDestination 

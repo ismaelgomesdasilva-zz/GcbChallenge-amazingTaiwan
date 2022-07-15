@@ -1,25 +1,17 @@
-import About from "../views/About";
-import Destination from "../views/Destinations";
-import Header from "../components/Header";
-import HomePage from "../views/Home";
-import Feedback from "../views/Feedback";
-import Subscribe from "../views/Subscribe";
-import Footer from "../views/Footer";
-import Headeresponsive from "../components/Headeresponsive";
+import { Header, Headeresponsive } from "../components";
+import { About, Destination, Feedback, Footer, HomePage, Subscribe } from "../views";
 
 export default function Home() {
   return (
     <>
-    
-
-       <Headeresponsive />
+      <Headeresponsive />
       <Header />
       <HomePage />
       <Destination />
       <About />
       <Feedback />
       <Subscribe />
-      <Footer /> 
+      <Footer />
     </>
   );
 }

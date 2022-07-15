@@ -6,7 +6,7 @@ import {
   Descriptions,
   ImageAling,
 } from "./styles";
-const Feedback = () => (
+export const Feedback = () => (
   <>
     <Title>Let’s see what other travellers say</Title>
     <AlignContainer>
@@ -59,4 +59,4 @@ const Feedback = () => (
     </AlignContainer>
   </>
 );
-export default Feedback;
+

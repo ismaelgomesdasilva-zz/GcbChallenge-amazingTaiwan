@@ -1,9 +1,9 @@
-import { Container } from "./styles";
 import { useState } from "react";
 import {AiOutlineHome} from 'react-icons/ai'
 import {BiPlanet, BiPencil} from 'react-icons/bi'
 import {BsPeople} from 'react-icons/bs'
-function Headeresponsive() {
+import { Container } from "./styles";
+export function Headeresponsive() {
     const [active, setMode] = useState(false)
     const ToggleMode = () => {
         setMode(!active)
@@ -29,4 +29,4 @@ function Headeresponsive() {
         </Container>
     )
 };
-export default Headeresponsive;
+

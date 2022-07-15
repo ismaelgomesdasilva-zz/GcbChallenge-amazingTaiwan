@@ -1,0 +1,6 @@
+export {About} from './About'
+export {Destination} from './Destinations'
+export {Feedback} from './Feedback'
+export{ Footer} from './Footer'
+export {HomePage} from './Home'
+export {Subscribe} from './Subscribe'

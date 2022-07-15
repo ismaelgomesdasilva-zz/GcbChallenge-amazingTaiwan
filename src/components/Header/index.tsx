@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../Button";
+import {Button} from "../Button";
 import { Container, Border } from './styles'
-const Header = () => (
+export const Header = () => (
   <Border>
     <Container>
       <div className="logo">
@@ -18,4 +18,4 @@ const Header = () => (
     </Container>
   </Border>
 );
-export default Header;
+ 
