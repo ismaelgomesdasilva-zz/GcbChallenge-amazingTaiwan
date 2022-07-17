@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import mediaQuery from "../../utils/mediaQuery";
+import mediaQuery from "../../utils/styles/mediaQuery";
 export const Container = styled.header`
   display: flex;
   align-items: center;
-  
-  
   max-width: 75rem;
   height: 5.8rem;
   margin: 0 auto;

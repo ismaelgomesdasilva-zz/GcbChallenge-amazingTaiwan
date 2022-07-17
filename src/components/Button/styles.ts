@@ -1,12 +1,17 @@
-import styled from 'styled-components'
+import styled, { ThemeContext, ThemeProvider } from 'styled-components'
 import { theme } from '../../utils/styles/theme'
 
-export const ButtonComponent = styled.button`
-width: 7rem;
-height: 2.6rem;
-background: ${theme.color.orange};
-border-radius: 3rem;
 
+type ButtonComponentProps = {
+    width?: number,
+    height?: number,
+    color: string,
+}
+export const ButtonComponent = styled.button<ButtonComponentProps>`
+width: ${props => props.width ? props.width: 7}rem;
+height: ${props => props.height ? props.height:2.6}rem;
+background: ${props=> props.color ? props.color: theme.color.orange };
+border-radius: 3rem;
 border: none;
 color: ${theme.color.white};
 font-weight: 700;

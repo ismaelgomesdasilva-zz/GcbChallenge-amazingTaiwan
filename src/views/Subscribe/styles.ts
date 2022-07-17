@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import mediaQuery from "../../utils/mediaQuery";
+import mediaQuery from "../../utils/styles/mediaQuery";
+import { theme } from "../../utils/styles/theme";
 
 export const Container = styled.div`
   margin-top: 9.375rem;
@@ -10,7 +11,6 @@ export const Container = styled.div`
     background: #ffffff;
     border-radius: 1.625rem;
   }
-
   form > input {
     border: none;
     width: 22.5rem;
@@ -22,21 +22,7 @@ export const Container = styled.div`
     line-height: 1.6875rem;
     color: rgba(41, 50, 65, 0.5);
   }
-
-  form > button {
-    width: 9.61rem;
-    height: 2.8519rem;
-    background: #293241;
-    border-radius: 1.4375rem;
-    border: none;
-    outline: none;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.125rem;
-    text-align: center;
-    color: #ffffff;
-  }
+  
   @media (max-width: ${mediaQuery.sml}) {
     form {
       width: 90%;

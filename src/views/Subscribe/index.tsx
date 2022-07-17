@@ -1,4 +1,6 @@
 
+import { Button } from '../../components'
+import { theme } from '../../utils/styles/theme'
 import { Container, Modal } from './styles'
 
 
@@ -14,7 +16,7 @@ export const Subscribe = () => (
                     every week.</p>
                 <form action='/' method='post'>
                     <input type='text' name='pesquisa' placeholder='Your email here' />
-                    <button type='submit'>Join Now</button>
+                    <Button title='Join Now' width={9.61} height={2.8519} color={theme.color.black} />
                 </form>
             </div>
         </Modal>

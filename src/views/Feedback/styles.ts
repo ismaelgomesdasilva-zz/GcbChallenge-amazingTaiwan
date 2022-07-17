@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import mediaQuery from "../../utils/mediaQuery";
+import mediaQuery from "../../utils/styles/mediaQuery";
 
 export const ModalComents = styled.div`
   width: 24rem;
