@@ -4,7 +4,7 @@ export type ButtonProps = {
   title: string
   width?: number
   height?: number
-  color: string
+  color?: string
 }
 export const Button = ({title,width, height, color}:ButtonProps) => (
   

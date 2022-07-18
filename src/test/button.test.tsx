@@ -1,12 +1,16 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { Button } from "../components/Button";
 
-describe("Checkbox Test", () => {
-  test("Testing button exist", () => {
+describe("Button Test", () => {
+  test("Title rendering", () => {
     const { getByText } = render(
-      <Button color="#FFF" title="Button" />
+      <Button title='Testing'/>
     );
-    const button = getByText("Botão");
-    expect(button).toBeTruthy();
+    const button = getByText("Testing");
+    expect(button).toBeInTheDocument();
   });
+  test('Button redering',() => {
+    render(<Button title='Testing'/>)
+    expect(screen.getByRole('button')).not.toBeDisabled()
+  })
 });

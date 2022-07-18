@@ -73,9 +73,9 @@ export const ContainerOrganization = styled.div`
   display: flex;
   background-color: #293241;
   width: 100%;
-  gap: 8.125rem;
+  gap: 9rem;
   padding: 0 6.25rem;
-
+  justify-content: center;
   padding-top: 1.875rem;
   @media (max-width: ${mediaQuery.xl}) {
     gap: 5rem;

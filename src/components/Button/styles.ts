@@ -5,7 +5,7 @@ import { theme } from '../../utils/styles/theme'
 type ButtonComponentProps = {
     width?: number,
     height?: number,
-    color: string,
+    color?: string,
 }
 export const ButtonComponent = styled.button<ButtonComponentProps>`
 width: ${props => props.width ? props.width: 7}rem;
@@ -16,4 +16,9 @@ border: none;
 color: ${theme.color.white};
 font-weight: 700;
 font-size: 1rem;
+cursor: pointer;
+:hover{
+    transform: scale(0.9);
+    filter:brightness(1.2)
+}
 `
