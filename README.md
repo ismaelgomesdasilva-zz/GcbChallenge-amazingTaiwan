@@ -1,82 +1,79 @@
-# Example app with styled-components
+# GCB Test: Pomodoro
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/vercel/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
+<img src="./Demonstração.gif" width="800px" height="600px" alt="Gif do Teste">
 
-This example uses the Rust-based [SWC](https://nextjs.org/docs/advanced-features/compiler#styled-components) in Next.js for better performance than Babel.
+> The project is a website that uses the Pomodoro method.
 
-Currently, only the `ssr` and `displayName` transforms have been implemented. These two transforms are the main requirement for using `styled-components` in Next.js.
+Check the Application: https://amazingtaiwain.netlify.app/ <br>
+## :page_facing_up: Explanation
 
-## Deploy your own
+Project was done in order to train skills in styled components and front-end documentation with the storybook
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-styled-components)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+## 📁 Pages
 
-## How to use
+The site consists of X different pages:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+
+- **Page 1: Home page.
+- **Page 2: Carousel Destinations
+- **Page 3: About Us
+- **Page 4: Review
+- **Page 5: Subscribe
+- **Page 6: Footer
+
+
+
+
+
+
+## :rocket: Technologies ##
+
+The following tools were used in this project:
+
+- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)  
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)  
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
+- [React](https://pt-br.reactjs.org/)
+- [Next](https://nextjs.org/)
+
+## :closed_book: Requirements ##
+
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+
+## :checkered_flag: Starting ##
 
 ```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
-# or
-pnpm create next-app --example with-styled-components with-styled-components-app
+# Clone this project
+$ git clone https://github.com/ismaelgomesdasilva/pomodoroteste
+# Access
+$ cd teste-gcb
+# Install dependencies
+$ yarn or npm 
+# Run the project
+$ yarn start or npm start 
+# The server will initialize in the <http://localhost:3000>
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## 🤝 Collaborators
 
-### Try it on CodeSandbox
+We thank the following people who contributed to this project:
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/97638555?v=4" width="140px;" alt="Foto do ismael no GitHub"/><br>
+        <sub>
+          <b>Ismael Gomes da Silva</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-### Notes
+## 📝 License
 
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
+This project is under license. See the [LICENSE](LICENSE.md) file for more details.
 
-<details>
-<summary>Click to expand workaround example</summary>
-<br />
-
-**components/StyledLink.js**
-
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
-
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
-
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: #40a9ff;
-  }
-
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
-```
-
-**pages/index.js**
-
-```javascript
-import StyledLink from '../components/StyledLink'
-
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
-
-</details>
+&#xa0;
