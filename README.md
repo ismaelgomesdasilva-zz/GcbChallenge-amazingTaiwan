@@ -1,8 +1,8 @@
 # GCB Test: Pomodoro
 
-<img src="./Demonstração.gif" width="800px" height="600px" alt="Gif do Teste">
+<img src="./preview.png" width="800px" height="600px" alt="Gif do Teste">
 
-> The project is a website that uses the Pomodoro method.
+> The project is a travel website.
 
 Check the Application: https://amazingtaiwain.netlify.app/ <br>
 ## :page_facing_up: Explanation
@@ -45,9 +45,9 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/ismaelgomesdasilva/pomodoroteste
+$ git clone https://github.com/ismaelgomesdasilva/GcbChallenge-amazingTaiwan
 # Access
-$ cd teste-gcb
+$ cd GcbChallenge-amazingTaiwan
 # Install dependencies
 $ yarn or npm 
 # Run the project
