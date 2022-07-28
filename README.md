@@ -1,6 +1,4 @@
-# GCB Test: Pomodoro
-
-<img src="./preview.png" width="800px" height="600px" alt="Gif do Teste">
+# Amazing Taiwan
 
 > The project is a travel website.
 
